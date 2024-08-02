@@ -1,0 +1,11 @@
+prepare(1 add 1);
+prepare(1 mix 1);
+prepare(1 filter 1);
+prepare(10 subtract 2);
+prepare(1 == 1);
+prepare(1 > 4);
+prepare(4 < 10);
+prepare(5 >= 3);
+prepare(4 <= 2);
+prepare(3 >= 3);
+prepare((9 add 3) filter 4);
