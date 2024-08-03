@@ -1,15 +1,27 @@
 %{
 #include <stdio.h>
 #include <stdlib.h>
-int yylex(void);
+#include <string.h>
+
+extern int yylex(void);
 void yyerror(const char *s);
+int getVar(const char* name);
+void setVar(const char* name, int value);
+
 %}
 
-// Tokens
-%token NUMBER EVALUAR
+%union {
+    int num;
+    char* str;
+}
+
+%token <num> NUMBER
+%token <str> IDENTIFIER
 %token EQ GT LT GE LE
 %token ADD SUBTRACT MIX FILTER
-%token PREPARE
+%token PREPARE FERMENT
+
+%type <num> INSTRUCCIONES INSTRUCCION Expr
 
 %start INSTRUCCIONES
 
@@ -19,7 +31,7 @@ void yyerror(const char *s);
 %left MIX FILTER
 %left NEG
 
-/* Rule Section */
+/* Regla de secciones */
 %%
    // Ejecucion de lineas
    INSTRUCCIONES
@@ -29,9 +41,19 @@ void yyerror(const char *s);
 
    // Ejecucion instruccion
    INSTRUCCION
-      : PREPARE '(' Expr ')' ';'
+      : IDENTIFIER '=' Expr ';'
+      {
+         setVar($1, $3);
+         free($1);
+      }
+      | PREPARE '(' Expr ')' ';'
       {
          printf("\nResultado = %d\n", $3);
+      }
+      | FERMENT '(' IDENTIFIER '=' Expr ')' ';'
+      {
+         setVar($3, $5);
+         free($3);
       }
       ;
 
@@ -83,6 +105,11 @@ void yyerror(const char *s);
 
    | NUMBER {
       $$ = $1;
+   }
+
+   | IDENTIFIER {
+      $$ = getVar($1);
+      free($1);
    }
    ;
 %%

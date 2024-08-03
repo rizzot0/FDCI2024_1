@@ -9,3 +9,8 @@ prepare(5 >= 3);
 prepare(4 <= 2);
 prepare(3 >= 3);
 prepare((9 add 3) filter 4);
+ferment(x = 5);
+ferment(y = 10);
+prepare(x add y);
+ferment(z = (x mix y));
+prepare(z);

@@ -40,7 +40,7 @@
       know about them.  */
    enum yytokentype {
      NUMBER = 258,
-     EVALUAR = 259,
+     IDENTIFIER = 259,
      EQ = 260,
      GT = 261,
      LT = 262,
@@ -51,12 +51,13 @@
      MIX = 267,
      FILTER = 268,
      PREPARE = 269,
-     NEG = 270
+     FERMENT = 270,
+     NEG = 271
    };
 #endif
 /* Tokens.  */
 #define NUMBER 258
-#define EVALUAR 259
+#define IDENTIFIER 259
 #define EQ 260
 #define GT 261
 #define LT 262
@@ -67,13 +68,27 @@
 #define MIX 267
 #define FILTER 268
 #define PREPARE 269
-#define NEG 270
+#define FERMENT 270
+#define NEG 271
 
 
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+typedef union YYSTYPE
+{
+
+/* Line 1676 of yacc.c  */
+#line 13 "parsero.y"
+
+    int num;
+    char* str;
+
+
+
+/* Line 1676 of yacc.c  */
+#line 91 "y.tab.h"
+} YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
