@@ -3,6 +3,8 @@ Fundamentos de la computacion curso invierno 2024-1
 
 ## Lenguaje COPT
 
+Desallorado utilizando ### bison(2.4.1 o posterior) y ### flex( 2.5.4a o posterior)  
+
 Lenguaje de alto nivel el cual tiene referencias a acciones relacionas al alcohol y sus procesos el cual su uso seria similar a la escritura sin reglas del ingles asignando palabras claves siendo las siguientes:
 
 ## Diccionario
