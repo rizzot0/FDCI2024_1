@@ -9,8 +9,9 @@ Lenguaje de alto nivel el cual tiene referencias a acciones relacionas al alcoho
 
 ## Diccionario
 
-#### accion = prepare (llamar a la funcion de procesar datos)
+#### Accion = prepare (llamar a la funcion de procesar datos)
 #### variable = ferment (creacion de variable)
+#### [Operacion]; (Se debe escribir ; al final de una linea de codigo)
 #### + = add
 #### - = subtract
 #### * = mix
@@ -29,3 +30,19 @@ Lenguaje de alto nivel el cual tiene referencias a acciones relacionas al alcoho
 #### -> bison -dy parsero.y
 #### -> gcc lex.yy.c y.tab.c 
 #### -> a.exe < testF.txt
+
+## Ejemplos de operaciones 
+
+### Ejemplo 1
+#### prepare(1 add 1); (Sumar 1+1)
+
+### Ejemplo 2
+#### prepare((9 add 3) filter 4); (Suma 9 +3 y lo divide en 3)
+
+### Ejemplo 3
+#### ferment(x = 5); (Asignar valor 5 a la variable x)
+#### ferment(y = 10); (Asignar valor 10 a la variable y)
+#### ferment(z = (x mix y)); (Multiplica x con y asignadolo a la variable z)
+#### prepare(z); (Muestra por consola el valor de la variable z)
+
+
