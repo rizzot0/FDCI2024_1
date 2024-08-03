@@ -24,8 +24,8 @@ Lenguaje de alto nivel el cual tiene referencias a acciones relacionas al alcoho
 
 ## Compilacion
 
--> Abrir cmd en la carpeta donde descomprimira el proyecto
--> flex lexus.l
--> bison -dy parsero.y
--> gcc lex.yy.c y.tab.c 
--> a.exe < testF.txt
+#### -> Abrir cmd en la carpeta donde descomprimira el proyecto
+#### -> flex lexus.l
+#### -> bison -dy parsero.y
+#### -> gcc lex.yy.c y.tab.c 
+#### -> a.exe < testF.txt
