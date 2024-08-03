@@ -19,8 +19,8 @@ Lenguaje de alto nivel el cual tiene referencias a acciones relacionas al alcoho
 #### while = pourup
 
 ## Salida por consola de datos booleanos
-### 0 = negative
-### 1 = positive
+#### 0 = negative
+#### 1 = positive
 
 ## Compilacion
 
