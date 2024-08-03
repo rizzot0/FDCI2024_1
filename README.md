@@ -9,14 +9,14 @@ Lenguaje de alto nivel el cual tiene referencias a acciones relacionas al alcoho
 
 ## Diccionario
 
-### accion = prepare (llamar a la funcion de procesar datos)
-### variable = ferment (creacion de variable)
-### + = add
-### - = subtract
-### * = mix
-### / = filter
-### if = if
-### while = pourup
+#### accion = prepare (llamar a la funcion de procesar datos)
+#### variable = ferment (creacion de variable)
+#### + = add
+#### - = subtract
+#### * = mix
+#### / = filter
+#### if = if
+#### while = pourup
 
 ## Salida por consola de datos booleanos
 ### 0 = negative
