@@ -1,5 +1,5 @@
 prepare(1 add 1);
-prepare(1 mix 1);
+prepare(10000000 mix 10000000);
 prepare(1 filter 1);
 prepare(10 subtract 2);
 prepare(1 == 1);
@@ -14,3 +14,17 @@ ferment(y = 10);
 prepare(x add y);
 ferment(z = (x mix y));
 prepare(z);
+prepare(bloodymary(8 add 1));
+
+ferment(h = 1);
+ferment(j = 5);
+if (1 == 2) {
+    prepare(h);
+} else{
+    prepare(j);
+}
+
+ferment(i = 1);
+ferment(a = 5);
+
+while(i < a){ferment(i = (i add 1));}
