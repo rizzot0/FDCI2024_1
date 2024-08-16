@@ -1,0 +1,14 @@
+COPT
+
+accion = prepare
+variable = drink
++ = add
+- = subtract
+x = mix
+: = filter
+if = if
+while = pourup
+fibonacci = bloodymary
+
+0 = negative
+1 = positive

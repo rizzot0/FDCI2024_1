@@ -1,0 +1,19 @@
+if (1 == 1) then 1 add 4 else 1 add 1 endif
+if (2 > 3) then 2 add 2 else 3 add 3 endif
+if (5 <= 5) then 10 subtract 2 else 10 mix 2 endif
+5 mix 3 
+2 subtract 1
+5 == 5
+6 > 2
+2 > 10
+4 >= 5
+a = 5
+b = 4
+c = 3
+if (a == b) then c add 10 else c add 1 endif
+c = c add 1
+d = 0
+e = 5
+d > e
+e > d
+pourup (d < e) prepare e = e add 1; pour
